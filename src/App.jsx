@@ -27,7 +27,7 @@ import "./App.css";
 function App() {
   return (
     <MovieProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/ott-streaming-platform">
         <div className="app">
 
           <nav className="navbar">
