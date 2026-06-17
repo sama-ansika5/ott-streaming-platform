@@ -1,0 +1,40 @@
+.profile-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  width: 400px;
+  background: rgba(20,20,20,0.9);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+.avatar {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+.profile-info {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.profile-info p {
+  margin: 12px 0;
+}
+
+.logout-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: crimson;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}

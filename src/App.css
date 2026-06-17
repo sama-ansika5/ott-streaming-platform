@@ -1,0 +1,315 @@
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Main App */
+
+.app {
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 30px;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;
+}
+
+.logo {
+  color: crimson;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+/* Pages */
+
+.page,
+.home,
+.movies-page,
+.reviews-page,
+.profile-page {
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+}
+
+/* Home Page */
+
+.home-page {
+  padding: 120px 20px 20px;
+}
+
+/* Hero Section */
+
+.hero-section {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.hero-section p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Hero Banner */
+
+.hero-banner {
+  padding: 80px 60px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Movie Grid */
+
+.movie-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* Movie Cards */
+
+.movie-card {
+  background: rgba(25, 25, 25, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card h3 {
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Movie Section */
+
+.movie-section h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Premium Plans */
+
+.plan-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.plan-card {
+  background: rgba(25, 25, 25, 0.95);
+  width: 280px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.plan-card h2 {
+  color: gold;
+  margin-bottom: 15px;
+}
+
+.plan-card h3 {
+  margin-bottom: 15px;
+}
+
+/* General Cards */
+
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* Forms */
+
+form {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 400px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Buttons */
+
+button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: red;
+}
+
+.watch-btn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Floating Profile */
+
+.floating-profile {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 70px;
+  height: 70px;
+
+  background: crimson;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+}
+
+/* Headings */
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-banner {
+    padding: 40px 20px;
+  }
+
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .plan-container {
+    justify-content: center;
+  }
+}
