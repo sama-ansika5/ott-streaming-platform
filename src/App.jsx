@@ -1,5 +1,5 @@
 import {
-  HashRouter,
+  BrowserRouter,
   Routes,
   Route,
   Link,
@@ -27,8 +27,9 @@ import "./App.css";
 function App() {
   return (
     <MovieProvider>
-      <HashRouter>
+      <BrowserRouter>
         <div className="app">
+          {/* Navbar */}
           <nav className="navbar">
             <h2 className="logo">OTT STREAM</h2>
 
@@ -46,6 +47,7 @@ function App() {
             </div>
           </nav>
 
+          {/* Routes */}
           <ErrorBoundary>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -66,6 +68,16 @@ function App() {
               />
 
               <Route
+                path="/movies"
+                element={<Movies />}
+              />
+
+              <Route
+                path="/watchlist"
+                element={<Watchlist />}
+              />
+
+              <Route
                 path="/hotnew"
                 element={<HotAndNew />}
               />
@@ -76,18 +88,8 @@ function App() {
               />
 
               <Route
-                path="/watchlist"
-                element={<Watchlist />}
-              />
-
-              <Route
                 path="/language"
                 element={<Language />}
-              />
-
-              <Route
-                path="/movies"
-                element={<Movies />}
               />
 
               <Route
@@ -115,6 +117,7 @@ function App() {
             </Routes>
           </ErrorBoundary>
 
+          {/* Floating Profile Button */}
           <div className="floating-profile">
             <Link
               to="/profile"
@@ -124,7 +127,7 @@ function App() {
             </Link>
           </div>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </MovieProvider>
   );
 }
